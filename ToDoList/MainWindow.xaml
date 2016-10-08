@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:ToDoList"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="center" Margin="0,28,0,10" HorizontalAlignment="center" >
+            <Button x:Name="button" Content="Button" Margin="3,0" Width="75"/>
+            <TextBox Background="Azure" Margin="3,0" Width="275"></TextBox>
+            <Label x:Name="label" Content="New ToDo"  Margin="3,0" VerticalAlignment="Center" HorizontalAlignment="Right" Background="Beige"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <DataGrid x:Name="dataGrid"/>
+
+        </StackPanel>
     </Grid>
+
 </Window>
